@@ -16,12 +16,8 @@ import java.io.IOException;
 
 public class GUI {
 
-    private static final int MAX_ERRORS = 3;
     private Shell shell;
-    private Label scoreLabel;
-    private Composite questionPanel;
     private Font boldFont;
-    private String lastAnswer = "";
     private String translations;
     private String strings;
     private String output;
