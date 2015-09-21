@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HW10_GUI_IJ:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HW10_GUI_IJ_jar</output-path>
+    <root id="archive" name="HW10_GUI_IJ.jar">
+      <element id="module-output" name="LocalizationScript" />
+      <element id="extracted-dir" path="$USER_HOME$/HW10/swt-4.4.2-cocoa-macosx-x86_64/swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/swt-4.5-cocoa-macosx-x86_64/swt.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
