@@ -136,16 +136,22 @@ public class Manager {
         boolean result = false;
         for (String key : map.keySet()) {
             String value = map.get(key);
-
             String[] valueArr = value.split("\"");
             String newValue = "";
             if (valueArr.length>1) {
-                for (int j = 0; j < valueArr.length - 1; j++){
+                for (int j = 0; j < valueArr.length-1; j++){
                     newValue = newValue + valueArr[j];
                     if (!valueArr[j].endsWith("\\")) {
                         newValue = newValue+"\\"+"\"";
                         result = true;
+                    } else {
+                        newValue = newValue +"\"";
                     }
+                }
+                if (valueArr[valueArr.length-1].endsWith("\\")) {
+                    newValue = newValue + valueArr[valueArr.length - 1]+"\"";
+                } else {
+                    newValue = newValue + valueArr[valueArr.length - 1];
                 }
                 map.put(key,newValue);
             }
