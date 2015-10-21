@@ -16,31 +16,31 @@ public class Manager {
     private static LinkedHashMap<String, String> englishStringsMap;
 
 
-    public static int start(String translations, String strings, String output, String platform) throws IOException {
-        /** returns 0 when there are no problems
-         *  returns 1 when there are quotation marks problems
-         *  returns 2 when there are LP problems
-         *  returns 3 when there are both LP and quotation marks problems
+    public static boolean[] start(String translations, String strings, String output, String platform) throws IOException {
+        /** returns array of booleans:
+         * 0 - LP errors
+         * 1 - quotation marks errors
+         * 2 - apostrophe errors
          **/
         String cleanStrings = cleanStrings(strings, platform);
         File stringsFile = new File(cleanStrings);
         File translationsFile = new File(translations);
         translatedStringsMap = fileToMap(translationsFile, "\t");
         englishStringsMap = fileToMap(stringsFile, "\t");
-        boolean lp = lpCheck(translatedStringsMap);
-        boolean quotationMarks = quotationMarksCheck(translatedStringsMap);
+        boolean[] results = new boolean[3];
+        results[0] = lpCheck(translatedStringsMap);
+        results[1] = quotationMarksCheck(translatedStringsMap);
+        results[2] = false;
+
+        if (platform.equals("Android")) {
+            results[2] = apostropheCheck(translatedStringsMap);
+        }
 
         translate();
 
         writeToFile(englishStringsMap, output, platform);
-        if (lp && !quotationMarks) {
-            return 1;
-        } else if (quotationMarks && !lp) {
-            return 2;
-        } else if (quotationMarks && lp) {
-            return 3;
-        }
-        return 0;
+
+        return results;
 
     }
 
@@ -74,11 +74,13 @@ public class Manager {
         return map;
     }
 
-    public static void writeToFile(Map<String, String> map, String filename, String platform) throws IOException {
+    public static void writeToFile(Map<String, String> map, String directory, String platform) throws IOException {
 
 
         if (platform.equals("iOS")) {
-            FileWriter fw = new FileWriter(filename + ".strings");
+            File file = new File (directory);
+            file.mkdir();
+            FileWriter fw = new FileWriter(new File(directory,"StringsForUI.strings"));
 
             fw.write("/*\n" +
                     " StringsForUI.strings\n" +
@@ -95,7 +97,9 @@ public class Manager {
             Files.delete(path);
 
         } else if (platform.equals("Android")) {
-            FileWriter fw = new FileWriter(filename + ".xml");
+            File file = new File (directory);
+            file.mkdir();
+            FileWriter fw = new FileWriter(new File(directory,"strings.xml"));
             fw.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>" + "\n" + "<resources>" + "\n");
 
             for (String key : map.keySet()) {
@@ -150,6 +154,33 @@ public class Manager {
                 }
                 if (valueArr[valueArr.length-1].endsWith("\\")) {
                     newValue = newValue + valueArr[valueArr.length - 1]+"\"";
+                } else {
+                    newValue = newValue + valueArr[valueArr.length - 1];
+                }
+                map.put(key,newValue);
+            }
+        }
+        return result;
+    }
+
+    public static boolean apostropheCheck(Map<String, String> map) {
+        boolean result = false;
+        for (String key : map.keySet()) {
+            String value = map.get(key);
+            String[] valueArr = value.split("\'");
+            String newValue = "";
+            if (valueArr.length>1) {
+                for (int j = 0; j < valueArr.length-1; j++){
+                    newValue = newValue + valueArr[j];
+                    if (!valueArr[j].endsWith("\\")) {
+                        newValue = newValue+"\\"+"\'";
+                        result = true;
+                    } else {
+                        newValue = newValue +"\'";
+                    }
+                }
+                if (valueArr[valueArr.length-1].endsWith("\\")) {
+                    newValue = newValue + valueArr[valueArr.length - 1]+"\'";
                 } else {
                     newValue = newValue + valueArr[valueArr.length - 1];
                 }

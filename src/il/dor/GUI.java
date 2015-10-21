@@ -118,7 +118,7 @@ public class GUI {
         fileSelection.setLayout(new GridLayout(4, false));
 
         final Label label = new Label(fileSelection, SWT.NONE);
-        label.setText("Enter the name of the output file");
+        label.setText("Enter the name of the output folder");
 
         final Text filePathField = new Text(fileSelection, SWT.SINGLE
                 | SWT.BORDER);
@@ -172,16 +172,24 @@ public class GUI {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
                 try {
-                    int result = Manager.start(translations, strings, output, platform);
-                    if (result == 0) {
-                        GUIUtils.showInfoDialog(shell, "Success", "Translation is finished successfully");
-                    } else if (result == 1) {
-                        GUIUtils.showInfoDialog(shell, "Finished", "Translation is finished successfully.\n LP problems were fixed");
-                    } else if (result == 2) {
-                        GUIUtils.showInfoDialog(shell, "Finished", "Translation is finished successfully.\n Quotation marks problems were fixed");
-                    } else if (result == 3) {
-                        GUIUtils.showInfoDialog(shell, "Finished", "Translation is finished successfully.\n Quotation marks and LP problems were fixed");
+                    boolean[] results = Manager.start(translations, strings, output, platform);
+                    String popupBody = "";
+                    for (int i = 0; i<results.length; i++) {
+                        if (results[i]) {
+                            if (i == 0) {
+                                popupBody = popupBody + "LP errors fixed" +"\n";
+                            } else if (i == 1) {
+                                popupBody = popupBody + "Quotation marks fixed" + "\n";
+                            } else if (i == 2) {
+                                popupBody = popupBody + "Apostrophe errors fixed";
+                            }
+                        }
                     }
+                    if (popupBody.equals("")) {
+                        popupBody = "No errors found";
+                    }
+
+                    GUIUtils.showInfoDialog(shell, "Finished", popupBody);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

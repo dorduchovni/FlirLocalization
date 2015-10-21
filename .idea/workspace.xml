@@ -6,14 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="test">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$1.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$2.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$3.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$4.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$5.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" />
+    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="2.0.3&#10;added apostrophe check &#10;changed">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/GUI.java" afterPath="$PROJECT_DIR$/src/il/dor/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/Manager.java" afterPath="$PROJECT_DIR$/src/il/dor/Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -57,30 +52,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3321739">
+              <caret line="120" column="58" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-                <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-                <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-                <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-                <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-                <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+                <element signature="e#4440#4441#0" expanded="true" />
+                <element signature="e#4504#4505#0" expanded="true" />
+                <element signature="e#5554#5555#0" expanded="true" />
+                <element signature="e#5606#5607#0" expanded="true" />
                 <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3319149">
-              <caret line="173" column="24" selection-start-line="173" selection-start-column="24" selection-end-line="173" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,8 +111,8 @@
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUIUtils.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUI.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/Manager.java" />
-        <option value="$PROJECT_DIR$/src/il/dor/GUI.java" />
         <option value="$PROJECT_DIR$/src/il/dor/Manager.java" />
+        <option value="$PROJECT_DIR$/src/il/dor/GUI.java" />
       </list>
     </option>
   </component>
@@ -439,12 +432,18 @@
       <option name="project" value="LOCAL" />
       <updated>1442840294820</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2.0.2&#10;fixed &quot; problem&#10;fixed cut strings">
+      <created>1445436887237</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1445436887237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -456,13 +455,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46908316" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46908316" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -484,7 +483,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="2.0.2&#10;fixed &quot; problem&#10;fixed cut strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.2&#10;fixed &quot; problem&#10;fixed cut strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -522,12 +522,10 @@
           <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
             <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
@@ -565,12 +563,10 @@
           <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
             <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
@@ -616,12 +612,10 @@
           <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
             <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
@@ -667,12 +661,10 @@
           <caret line="202" column="52" selection-start-line="202" selection-start-column="52" selection-end-line="202" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
             <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
@@ -710,12 +702,10 @@
           <caret line="178" column="21" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
             <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
@@ -794,29 +784,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createShell#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile1LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createFile2LoadingPanel#0;class#GUI#0" expanded="false" />
-            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#startButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
+    <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3319149">
-          <caret line="173" column="24" selection-start-line="173" selection-start-column="24" selection-end-line="173" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.3321739">
+          <caret line="120" column="58" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4440#4441#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#5554#5555#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="method#runApplication#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
