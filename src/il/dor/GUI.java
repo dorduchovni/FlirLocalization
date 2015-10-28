@@ -41,17 +41,16 @@ public class GUI {
         shell.setSize(new Point(monitor_bounds.width / 3,
                 monitor_bounds.height / 3));
         shell.setLayout(new GridLayout());
-
         FontData fontData = new FontData();
         fontData.setStyle(SWT.BOLD);
         boldFont = new Font(shell.getDisplay(), fontData);
-
 
         createFile1LoadingPanel();
         createFile2LoadingPanel();
         createTextField();
         createRadio();
-        startButton();
+        translateButton();
+        sourceToExcelButton();
 
     }
 
@@ -78,9 +77,11 @@ public class GUI {
         browseButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
-                filePathField.setText(GUIUtils.getFilePathFromFileDialog(shell));
-                translations = filePathField.getText();
-
+                String filePath = GUIUtils.getFilePathFromFileDialog(shell);
+                if (filePath!=null) {
+                    filePathField.setText(filePath);
+                    translations = filePathField.getText();
+                }
             }
         });
     }
@@ -105,8 +106,11 @@ public class GUI {
         browseButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
-                filePathField.setText(GUIUtils.getFilePathFromFileDialog(shell));
-                strings = filePathField.getText();
+                String filePath = GUIUtils.getFilePathFromFileDialog(shell);
+                if (filePath!=null) {
+                    filePathField.setText(filePath);
+                    strings = filePathField.getText();
+                }
             }
         });
 
@@ -160,7 +164,7 @@ public class GUI {
         });
     }
 
-    private void startButton() {
+    private void translateButton() {
         final Composite fileSelection = new Composite(shell, SWT.NULL);
         fileSelection.setLayoutData(GUIUtils.createFillGridData(1));
         fileSelection.setLayout(new GridLayout(4, false));
@@ -172,7 +176,7 @@ public class GUI {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
                 try {
-                    boolean[] results = Manager.start(translations, strings, output, platform);
+                    boolean[] results = Manager.startTranslation(translations, strings, output, platform);
                     String popupBody = "";
                     for (int i = 0; i<results.length; i++) {
                         if (results[i]) {
@@ -189,6 +193,45 @@ public class GUI {
                         popupBody = "No errors found";
                     }
 
+                    GUIUtils.showInfoDialog(shell, "Finished", popupBody);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+    }
+
+
+    private void sourceToExcelButton() {
+        final Composite fileSelection = new Composite(shell, SWT.NULL);
+        fileSelection.setLayoutData(GUIUtils.createFillGridData(1));
+        fileSelection.setLayout(new GridLayout(4, false));
+
+        // "Start" button
+        final Button playButton = new Button(fileSelection, SWT.PUSH);
+        playButton.setText("Export source to excel");
+        playButton.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent selectionEvent) {
+                try {
+                    boolean[] results = Manager.sourceToExcel(translations, output, platform);
+                    String popupBody = "";
+                    for (int i = 0; i<results.length; i++) {
+                        if (results[i]) {
+                            if (i == 0) {
+                                popupBody = popupBody + "LP errors fixed" +"\n";
+                            } else if (i == 1) {
+                                popupBody = popupBody + "Quotation marks fixed" + "\n";
+                            } else if (i == 2) {
+                                popupBody = popupBody + "Apostrophe errors fixed";
+                            }
+                        }
+                    }
+                    if (popupBody.equals("")) {
+                        popupBody = "No errors found";
+                    }
                     GUIUtils.showInfoDialog(shell, "Finished", popupBody);
                 } catch (IOException e) {
                     e.printStackTrace();

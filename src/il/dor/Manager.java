@@ -12,16 +12,18 @@ import static java.nio.file.Paths.get;
  * Created by Dor on 8/23/15.
  */
 public class Manager {
-    private static LinkedHashMap<String, String> translatedStringsMap;
-    private static LinkedHashMap<String, String> englishStringsMap;
+ //   private static LinkedHashMap<String, String> translatedStringsMap;
+  //  private static LinkedHashMap<String, String> englishStringsMap;
 
 
-    public static boolean[] start(String translations, String strings, String output, String platform) throws IOException {
+    public static boolean[] startTranslation(String translations, String strings, String output, String platform) throws IOException {
         /** returns array of booleans:
          * 0 - LP errors
          * 1 - quotation marks errors
          * 2 - apostrophe errors
          **/
+        LinkedHashMap<String, String> translatedStringsMap;
+        LinkedHashMap<String, String> englishStringsMap;
         String cleanStrings = cleanStrings(strings, platform);
         File stringsFile = new File(cleanStrings);
         File translationsFile = new File(translations);
@@ -36,12 +38,31 @@ public class Manager {
             results[2] = apostropheCheck(translatedStringsMap);
         }
 
-        translate();
+        LinkedHashMap<String,String> finalMapAfterTranslation = translate(translatedStringsMap,englishStringsMap);
 
-        writeToFile(englishStringsMap, output, platform);
+        writeToStringFile(finalMapAfterTranslation, output, platform);
 
         return results;
 
+    }
+
+    public static boolean[] sourceToExcel(String strings, String output, String platform) throws IOException {
+        LinkedHashMap<String, String> stringsMap;
+        String cleanStrings = cleanStrings(strings, platform);
+        File stringsFile = new File(cleanStrings);
+        stringsMap = fileToMap(stringsFile, "\t");
+        boolean[] results = new boolean[3];
+        results[0] = lpCheck(stringsMap);
+        results[1] = quotationMarksCheck(stringsMap);
+        results[2] = false;
+
+        if (platform.equals("Android")) {
+            results[2] = apostropheCheck(stringsMap);
+        }
+
+        writeToExcelFile(stringsMap,output,platform);
+
+        return results;
     }
 
     public static LinkedHashMap fileToMap(File file, String letter) throws IOException {
@@ -74,7 +95,7 @@ public class Manager {
         return map;
     }
 
-    public static void writeToFile(Map<String, String> map, String directory, String platform) throws IOException {
+    public static void writeToStringFile(Map<String, String> map, String directory, String platform) throws IOException {
 
 
         if (platform.equals("iOS")) {
@@ -112,12 +133,46 @@ public class Manager {
         }
     }
 
-    public static void translate() {
+
+    public static void writeToExcelFile(Map<String, String> map, String directory, String platform) throws IOException {
+
+
+        if (platform.equals("iOS")) {
+            File file = new File (directory);
+            file.mkdir();
+            FileWriter fw = new FileWriter(new File(directory,"Strings table.xls"));
+
+
+            for (String key : map.keySet()) {
+                fw.write(key + "\t" + map.get(key) + "\n");
+            }
+            fw.close();
+            Path path = get("iOS.tmp");
+            Files.delete(path);
+
+        } else if (platform.equals("Android")) {
+            File file = new File (directory);
+            file.mkdir();
+            FileWriter fw = new FileWriter(new File(directory,"Strings table.xls"));
+
+            for (String key : map.keySet()) {
+                fw.write(key + "\t" + map.get(key) + "\n");
+            }
+            fw.close();
+            Path path = get("Android.tmp");
+            Files.delete(path);
+        }
+    }
+
+
+    public static LinkedHashMap translate(Map<String, String> translatedStringsMap, Map<String, String> englishStringsMap) {
+        LinkedHashMap<String,String> result = new LinkedHashMap<>(englishStringsMap);
         for (String key : translatedStringsMap.keySet()) {
-            if (englishStringsMap.containsKey(key)) {
-                englishStringsMap.put(key, translatedStringsMap.get(key));
+            if (result.containsKey(key)) {
+                result.put(key, translatedStringsMap.get(key));
             }
         }
+        return result;
     }
 
     public static boolean lpCheck(Map<String, String> map) {
