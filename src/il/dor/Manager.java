@@ -88,9 +88,12 @@ public class Manager {
         for (String key : map.keySet()) {
             String value = map.get(key);
             if (value.startsWith("\"")) {
-                map.put(key, value.substring(1, value.length() - 1));
+                map.put(key, value.substring(1, value.length()));
             }
-
+            value = map.get(key);
+            if (value.endsWith("\"")) {
+                map.put(key, value.substring(0, value.length()-1));
+            }
         }
         return map;
     }
@@ -153,7 +156,7 @@ public class Manager {
         } else if (platform.equals("Android")) {
             File file = new File (directory);
             file.mkdir();
-            FileWriter fw = new FileWriter(new File(directory,"Strings table.xls"));
+            FileWriter fw = new FileWriter(new File(directory,"Strings table.txt"));
 
             for (String key : map.keySet()) {
                 fw.write(key + "\t" + map.get(key) + "\n");
@@ -182,7 +185,7 @@ public class Manager {
             for (String key : map.keySet()) {
                 String value = map.get(key);
                 if (value.contains(lp)) {
-                    String newValue = value.substring(0, value.indexOf(lp)) + value.substring(lp.length(), value.length() - 1);
+                    String newValue = value.substring(0, value.indexOf(lp)) + value.substring(lp.length(), value.length());
                     map.put(key, newValue);
                     result = true;
                 }
@@ -276,6 +279,7 @@ public class Manager {
             while (line != null) {
                 if (line.contains("string name")) {
                     String newLine = line;
+                    newLine = newLine.replaceAll("\t<string name=\"","");
                     newLine = newLine.replaceAll("    <string name=\"", "");
                     newLine = newLine.replaceAll("\">", "\t");
                     newLine = newLine.replaceAll("</string>", "");

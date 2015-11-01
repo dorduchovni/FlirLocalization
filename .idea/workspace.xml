@@ -6,18 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="">
+    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="minor bugs&#10;started building new GUI">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/il/dor/tesy.form" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/il/dor/tesy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$1.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$2.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$3.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$4.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$5.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/GUI.java" afterPath="$PROJECT_DIR$/src/il/dor/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/Manager.java" afterPath="$PROJECT_DIR$/src/il/dor/Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,16 +33,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GUIUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/il/dor/GUIUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/il/dor/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,53 +43,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.4047976">
-              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-                <element signature="e#4688#4689#0" expanded="true" />
-                <element signature="e#4752#4753#0" expanded="true" />
                 <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-                <element signature="e#5802#5803#0" expanded="true" />
-                <element signature="e#5854#5855#0" expanded="true" />
                 <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-                <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tesy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/il/dor/tesy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tesy.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/il/dor/tesy.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.8490879">
+              <caret line="158" column="80" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
                 <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-                <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
                 <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
                 <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
               </folding>
@@ -145,9 +104,11 @@
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUIUtils.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUI.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/Manager.java" />
-        <option value="$PROJECT_DIR$/src/il/dor/Manager.java" />
         <option value="$PROJECT_DIR$/src/il/dor/GUI.java" />
+        <option value="$PROJECT_DIR$/android_phone_french_strings/strings.xml" />
+        <option value="$PROJECT_DIR$/android_phone_portuguese_strings/strings.xml" />
         <option value="$PROJECT_DIR$/src/il/dor/tesy.form" />
+        <option value="$PROJECT_DIR$/src/il/dor/Manager.java" />
       </list>
     </option>
   </component>
@@ -189,9 +150,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,31 +199,12 @@
               <option name="myItemId" value="dor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tesy" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HW10_GUI_IJ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlirLocalization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,7 +440,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445440731482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added export to excel&#10;stability improvements">
+      <created>1446026557932</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1446026557932</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -513,21 +458,21 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30383795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30383795" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272921" sideWeight="0.509375" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46908316" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46801707" sideWeight="0.49479166" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23027718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272921" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -548,22 +493,16 @@
     <MESSAGE value="test" />
     <MESSAGE value="2.0.2&#10;fixed &quot; problem&#10;fixed cut strings" />
     <MESSAGE value="2.0.3&#10;added apostrophe check &#10;changed output name to output directory name" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.3&#10;added apostrophe check &#10;changed output name to output directory name" />
+    <MESSAGE value="added export to excel&#10;stability improvements" />
+    <MESSAGE value="minor bugs&#10;started building new GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor bugs&#10;started building new GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="44" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -572,11 +511,49 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
+            <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
+            <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/il/dor/tesy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/il/dor/tesy.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/GUIUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -595,13 +572,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -614,7 +586,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
             <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
             <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
             <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
@@ -625,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,13 +614,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -663,7 +628,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
             <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
             <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
             <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
@@ -682,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,13 +664,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,7 +678,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
             <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
             <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
             <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
@@ -739,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,13 +714,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -777,7 +728,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
             <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
             <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
             <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
@@ -788,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,13 +756,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -826,7 +770,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
             <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
             <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
             <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
@@ -837,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,6 +825,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3503937">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2651297">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -896,41 +851,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3503937">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2651297">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/tesy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -942,18 +873,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4047976">
-          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5854#5855#0" expanded="true" />
             <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-            <element signature="method#sourceToExcelButton#0;class#GUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8490879">
+          <caret line="158" column="80" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
