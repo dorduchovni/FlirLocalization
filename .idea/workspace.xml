@@ -6,11 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="minor bugs&#10;started building new GUI">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/il/dor/tesy.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/il/dor/tesy.java" />
+    <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HW10_GUI_IJ_jar/HW10_GUI_IJ.jar" afterPath="$PROJECT_DIR$/out/artifacts/HW10_GUI_IJ_jar/HW10_GUI_IJ.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/GUI.java" afterPath="$PROJECT_DIR$/src/il/dor/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/Manager.java" afterPath="$PROJECT_DIR$/src/il/dor/Manager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/swt.xml" afterPath="$PROJECT_DIR$/.idea/libraries/swt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HW10_GUI_IJ.iws" />
@@ -33,42 +36,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/il/dor/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
-                <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-                <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Manager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8490879">
-              <caret line="158" column="80" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.443038">
+              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-                <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-                <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-                <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,10 +78,11 @@
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUIUtils.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/GUI.java" />
         <option value="$PROJECT_DIR$/src/il/ac/tau/cs/sw1/trivia/Manager.java" />
-        <option value="$PROJECT_DIR$/src/il/dor/GUI.java" />
         <option value="$PROJECT_DIR$/android_phone_french_strings/strings.xml" />
         <option value="$PROJECT_DIR$/android_phone_portuguese_strings/strings.xml" />
         <option value="$PROJECT_DIR$/src/il/dor/tesy.form" />
+        <option value="$PROJECT_DIR$/src/il/dor/GUI.java" />
+        <option value="$PROJECT_DIR$/android_phone_ES_strings/strings.xml" />
         <option value="$PROJECT_DIR$/src/il/dor/Manager.java" />
       </list>
     </option>
@@ -150,6 +125,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,8 +179,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -212,7 +187,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xstream-1.4.8/lib/xstream-1.4.8.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -222,21 +197,21 @@
     <property name="FullScreen" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="Android.tmp&#9;null&#9;null&#10;writeToFileWithLength&#9;PSI&#9;JAVA://il.ac.tau.cs.sw1.trivia.Manager#writeToFileWithLength" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="181" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="120" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="183" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="122" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="185" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="123" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="701" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="560" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="181" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="183" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="137" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="185" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="139" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="701" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="513" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -446,7 +421,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446026557932</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="minor bugs&#10;export to txt instead of xls &#10;">
+      <created>1446384306501</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1446384306501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -459,23 +440,23 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30383795" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272921" sideWeight="0.509375" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21215352" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30383795" sideWeight="0.5104167" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46801707" sideWeight="0.49479166" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272921" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46588486" sideWeight="0.48020834" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -495,14 +476,41 @@
     <MESSAGE value="2.0.3&#10;added apostrophe check &#10;changed output name to output directory name" />
     <MESSAGE value="added export to excel&#10;stability improvements" />
     <MESSAGE value="minor bugs&#10;started building new GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bugs&#10;started building new GUI" />
+    <MESSAGE value="minor bugs&#10;export to txt instead of xls &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor bugs&#10;export to txt instead of xls &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
+          <line>382</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
+          <line>391</line>
+          <properties />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
+          <line>368</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="68" />
+      <option name="time" value="99" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -542,10 +550,6 @@
           <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -584,10 +588,6 @@
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,10 +626,6 @@
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -676,10 +672,6 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,10 +718,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,10 +756,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -828,21 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3503937">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2651297">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -871,29 +840,56 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <caret line="173" column="40" selection-start-line="173" selection-start-column="40" selection-end-line="173" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
-            <element signature="method#translateButton#0;class#GUI#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/xstream-1.4.8/lib/xstream-1.4.8.jar!/com/thoughtworks/xstream/XStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3539604">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3539604">
+          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/org/w3c/dom/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="169" column="30" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8490879">
-          <caret line="158" column="80" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.443038">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
-            <element signature="method#writeToStringFile#0;class#Manager#0" expanded="false" />
-            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
-            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>

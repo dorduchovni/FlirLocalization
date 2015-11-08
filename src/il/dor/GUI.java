@@ -185,7 +185,9 @@ public class GUI {
                             } else if (i == 1) {
                                 popupBody = popupBody + "Quotation marks fixed" + "\n";
                             } else if (i == 2) {
-                                popupBody = popupBody + "Apostrophe errors fixed";
+                                popupBody = popupBody + "Apostrophe errors fixed\n";
+                            } else if (i==3) {
+                                popupBody = popupBody + "Additional strings generated";
                             }
                         }
                     }
@@ -225,7 +227,9 @@ public class GUI {
                             } else if (i == 1) {
                                 popupBody = popupBody + "Quotation marks fixed" + "\n";
                             } else if (i == 2) {
-                                popupBody = popupBody + "Apostrophe errors fixed";
+                                popupBody = popupBody + "Apostrophe errors fixed\n";
+                            } else if (i==3) {
+                                popupBody = popupBody + "Additional strings generated";
                             }
                         }
                     }
