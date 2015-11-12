@@ -1,20 +1,20 @@
 package il.dor;
 
-import com.sun.org.apache.xerces.internal.parsers.DOMParser;
-import com.thoughtworks.xstream.XStream;
+
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -37,20 +37,13 @@ public class Manager {
          **/
         LinkedHashMap<String, String> translatedStringsMap;
         LinkedHashMap<String, String> englishStringsMap;
-/**
-        try {
-            test(translations);
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
-*/
+
         String cleanStrings = cleanStrings(strings, platform);
         File stringsFile = new File(cleanStrings);
         File translationsFile = new File(translations);
         translatedStringsMap = fileToMap(translationsFile, "\t");
         englishStringsMap = fileToMap(stringsFile, "\t");
+
         boolean[] results = new boolean[4];
         results[0] = lpCheck(translatedStringsMap);
         results[1] = quotationMarksCheck(translatedStringsMap);
@@ -60,15 +53,30 @@ public class Manager {
         if (platform.equals("Android")) {
             results[2] = apostropheCheck(translatedStringsMap);
         }
-        LinkedHashMap<String,String>[] mapsAfterTranslation = translate(translatedStringsMap,englishStringsMap);
-        LinkedHashMap<String,String> finalMapAfterTranslation = mapsAfterTranslation[0];
-        LinkedHashMap<String,String> additionalStringsMap = mapsAfterTranslation[1];
 
-        if (additionalStringsMap.size()>0) {
-            results[3] = true;
-            writeToExcelFile(additionalStringsMap,output+"_additional",platform);
+        if (platform.equals("Android")) {
+            try {
+                androidTranslation(strings,translatedStringsMap,output);
+            } catch (SAXException e) {
+                e.printStackTrace();
+            } catch (ParserConfigurationException e) {
+                e.printStackTrace();
+            } catch (TransformerException e) {
+                e.printStackTrace();
+            }
+        } else if (platform.equals("iOS")) {
+            LinkedHashMap<String,String>[] mapsAfterTranslation = translate(translatedStringsMap,englishStringsMap);
+            LinkedHashMap<String,String> finalMapAfterTranslation = mapsAfterTranslation[0];
+            LinkedHashMap<String,String> additionalStringsMap = mapsAfterTranslation[1];
+
+            if (additionalStringsMap.size()>0) {
+                results[3] = true;
+                writeToExcelFile(additionalStringsMap,output+"_additional",platform);
+            }
+            writeToStringFile(finalMapAfterTranslation, output, platform);
+
+
         }
-        writeToStringFile(finalMapAfterTranslation, output, platform);
 
         Path path = get(platform+".tmp");
         Files.delete(path);
@@ -183,26 +191,38 @@ public class Manager {
         }
     }
 
-    public static void test (String file) throws IOException, SAXException, ParserConfigurationException {
+    public static void androidTranslation(String file, Map<String,String> translationsMap,String output) throws IOException, SAXException, ParserConfigurationException, TransformerException {
+        File outputFile = new File (output);
+        outputFile.mkdir();
+
+
         File xmlToParse = new File(file);
         DocumentBuilderFactory dbFactory
                 = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(xmlToParse);
         doc.getDocumentElement().normalize();
-        NodeList blist = doc.getElementsByTagName("item");
-        NodeList nList = doc.getElementsByTagName("string");
-        System.out.println("----------------------------");
-        for (int temp = 0; temp < nList.getLength(); temp++) {
-            Node nNode = nList.item(temp);
-            System.out.println("\nCurrent Element :"
-                    + nNode.getNodeName());
-            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element eElement = (Element) nNode;
-                System.out.println("Student roll no : "
-                        + eElement.getAttribute("string"));
+
+        NodeList stringNode = doc.getElementsByTagName("string");
+        for (int i = 0; i<stringNode.getLength(); i++) {
+            String key = stringNode.item(i).getAttributes().getNamedItem("name").getNodeValue();
+            String newValue = translationsMap.get(key);
+            if (newValue != null) {
+                stringNode.item(i).setTextContent(newValue);
             }
         }
+
+        stringNode = doc.getElementsByTagName("plurals");
+        for (int i = 0; i<stringNode.getLength(); i++) {
+            String key = stringNode.item(i).getAttributes().getNamedItem("name").getNodeValue();
+        }
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File(outputFile,"strings.xml"));
+        transformer.transform(source, result);
+
 
 }
 
@@ -325,6 +345,7 @@ public class Manager {
                 }
                 map.put(key,newValue);
             }
+
         }
         return result;
     }
