@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7115e7bd-96a7-4dc4-be7c-0e069353d78e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/Manager.java" afterPath="$PROJECT_DIR$/src/il/dor/Manager.java" />
     </list>
@@ -34,11 +33,35 @@
       <file leaf-file-name="Manager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6911765">
-              <caret line="330" column="33" selection-start-line="330" selection-start-column="33" selection-end-line="330" selection-end-column="33" />
+            <state vertical-scroll-proportion="1.6336634">
+              <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+                <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+                <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+                <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+                <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+                <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+                <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+                <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+                <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+                <element signature="method#translate#0;class#Manager#0" expanded="false" />
+                <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+                <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+                <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+                <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventTable.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.259259">
+              <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,8 +127,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="777" />
+    <option name="width" value="1920" />
+    <option name="height" value="1007" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -535,11 +558,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446987723105</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="working on the new android translation methods">
+      <created>1447318255532</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1447318255532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -548,23 +577,23 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30383795" sideWeight="0.5104167" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978677" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272921" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6158192" sideWeight="0.48020834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43176973" sideWeight="0.48020834" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30170575" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30063966" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -586,46 +615,15 @@
     <MESSAGE value="minor bugs&#10;started building new GUI" />
     <MESSAGE value="minor bugs&#10;export to txt instead of xls &#10;" />
     <MESSAGE value="started working on DOM parser - not implemented yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on DOM parser - not implemented yet." />
+    <MESSAGE value="working on the new android translation methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on the new android translation methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>403</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>412</line>
-          <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>389</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>216</line>
-          <properties />
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/il/dor/Manager.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="104" />
+      <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -640,6 +638,20 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,6 +662,20 @@
           <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,6 +709,20 @@
           <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -718,6 +758,20 @@
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -753,6 +807,20 @@
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -796,6 +864,20 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,6 +921,20 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -874,6 +970,20 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -958,21 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3539604">
-          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/org/w3c/dom/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="169" column="30" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FlirFX 1.4 strings to translate 2/Zxing/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -996,44 +1091,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.115384616">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android_xsing_land_chinese_strings/strings.xml">
+    <entry file="file://$PROJECT_DIR$/phone_strings_2_11 TEST.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android_xsing_chinese_strings/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android_tablet_chinese_strings/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android_phone_chinese_strings/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6911765">
-          <caret line="330" column="33" selection-start-line="330" selection-start-column="33" selection-end-line="330" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,6 +1110,46 @@
           <folding>
             <element signature="method#createTextField#0;class#GUI#0" expanded="false" />
             <element signature="method#createRadio#0;class#GUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/org/w3c/dom/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33280253">
+          <caret line="262" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="953" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.259259">
+          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/il/dor/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6336634">
+          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#startTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#iosTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#sourceToExcel#0;class#Manager#0" expanded="false" />
+            <element signature="method#fileToMap#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToIosStringFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#androidTranslation#0;class#Manager#0" expanded="false" />
+            <element signature="method#additionalCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#untranslatedCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#writeToExcelFile#0;class#Manager#0" expanded="false" />
+            <element signature="method#translate#0;class#Manager#0" expanded="false" />
+            <element signature="method#lpCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#quotationMarksCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#apostropheCheck#0;class#Manager#0" expanded="false" />
+            <element signature="method#cleanStrings#0;class#Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
