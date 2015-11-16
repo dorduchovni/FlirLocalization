@@ -75,7 +75,7 @@ public class Manager {
 
         } else if (platform.equals("iOS")) {
             LinkedHashMap<String,String> finalMapAfterTranslation = translate(translatedStringsMap,englishStringsMap);
-            results[3] = iosTranslation (finalMapAfterTranslation,englishStringsMap,output);
+            results[3] = iosTranslation (finalMapAfterTranslation,translatedStringsMap,englishStringsMap,output);
         }
 
         Path path = get(platform+".tmp");
@@ -85,16 +85,16 @@ public class Manager {
 
     }
 
-    private static boolean iosTranslation(LinkedHashMap<String, String> finalMapAfterTranslation, LinkedHashMap<String, String> englishStringsMap, String output) throws IOException {
+    private static boolean iosTranslation(LinkedHashMap<String, String> finalMapAfterTranslation, LinkedHashMap<String, String> translatedMap, LinkedHashMap<String, String> englishStringsMap, String output) throws IOException {
 
         boolean isAdditional = false;
 
-        LinkedHashMap<String,String> untranslatedStringsMap = untranslatedCheck (finalMapAfterTranslation,englishStringsMap);
+        LinkedHashMap<String,String> untranslatedStringsMap = untranslatedCheck (translatedMap,englishStringsMap);
         if (untranslatedStringsMap.size()>0) {
             isAdditional = true;
             writeToExcelFile(untranslatedStringsMap, output + "_UNTRANSLATED_STRINGS");
         }
-        LinkedHashMap<String,String> additionalStringsMap = additionalCheck (finalMapAfterTranslation,englishStringsMap);
+        LinkedHashMap<String,String> additionalStringsMap = additionalCheck (translatedMap,englishStringsMap);
         if (additionalStringsMap.size()>0) {
             isAdditional = true;
             writeToExcelFile(additionalStringsMap, output + "_ADDITIONAL_STRINGS");
