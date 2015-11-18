@@ -1,9 +1,14 @@
 package il.dor;
 
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,6 +20,8 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -26,7 +33,6 @@ import static java.nio.file.Paths.get;
 public class Manager {
 
 
-
     public static boolean[] startTranslation(String translations, String strings, String output, String platform) throws IOException {
         /** returns array of booleans:
          * 0 - LP errors
@@ -36,7 +42,7 @@ public class Manager {
          **/
         LinkedHashMap<String, String> translatedStringsMap;
         LinkedHashMap<String, String> englishStringsMap;
-
+        //excelTest();
         String cleanStrings = null;
         try {
             cleanStrings = cleanStrings(strings, platform);
@@ -57,13 +63,12 @@ public class Manager {
         results[3] = false;
 
 
-
         if (platform.equals("Android")) {
 
             results[2] = apostropheCheck(translatedStringsMap);
 
             try {
-                results[3] = androidTranslation(strings,translatedStringsMap,output);
+                results[3] = androidTranslation(strings, translatedStringsMap, output);
             } catch (SAXException e) {
                 e.printStackTrace();
             } catch (ParserConfigurationException e) {
@@ -74,11 +79,11 @@ public class Manager {
 
 
         } else if (platform.equals("iOS")) {
-            LinkedHashMap<String,String> finalMapAfterTranslation = translate(translatedStringsMap,englishStringsMap);
-            results[3] = iosTranslation (finalMapAfterTranslation,translatedStringsMap,englishStringsMap,output);
+            LinkedHashMap<String, String> finalMapAfterTranslation = translate(translatedStringsMap, englishStringsMap);
+            results[3] = iosTranslation(finalMapAfterTranslation, translatedStringsMap, englishStringsMap, output);
         }
 
-        Path path = get(platform+".tmp");
+        Path path = get(platform + ".tmp");
         Files.delete(path);
 
         return results;
@@ -89,13 +94,13 @@ public class Manager {
 
         boolean isAdditional = false;
 
-        LinkedHashMap<String,String> untranslatedStringsMap = untranslatedCheck (translatedMap,englishStringsMap);
-        if (untranslatedStringsMap.size()>0) {
+        LinkedHashMap<String, String> untranslatedStringsMap = untranslatedCheck(translatedMap, englishStringsMap);
+        if (untranslatedStringsMap.size() > 0) {
             isAdditional = true;
             writeToExcelFile(untranslatedStringsMap, output + "_UNTRANSLATED_STRINGS");
         }
-        LinkedHashMap<String,String> additionalStringsMap = additionalCheck (translatedMap,englishStringsMap);
-        if (additionalStringsMap.size()>0) {
+        LinkedHashMap<String, String> additionalStringsMap = additionalCheck(translatedMap, englishStringsMap);
+        if (additionalStringsMap.size() > 0) {
             isAdditional = true;
             writeToExcelFile(additionalStringsMap, output + "_ADDITIONAL_STRINGS");
         }
@@ -129,7 +134,7 @@ public class Manager {
             results[2] = apostropheCheck(stringsMap);
         }
 
-        writeToExcelFile(stringsMap,output);
+        writeToExcelFile(stringsMap, output);
 
         return results;
     }
@@ -163,7 +168,7 @@ public class Manager {
             }
             value = map.get(key);
             if (value.endsWith("\"")) {
-                map.put(key, value.substring(0, value.length()-1));
+                map.put(key, value.substring(0, value.length() - 1));
             }
         }
         return map;
@@ -172,28 +177,28 @@ public class Manager {
     public static void writeToIosStringFile(Map<String, String> map, String directory) throws IOException {
 
 
-            File file = new File (directory);
-            file.mkdir();
-            FileWriter fw = new FileWriter(new File(directory,"StringsForUI.strings"));
+        File file = new File(directory);
+        file.mkdir();
+        FileWriter fw = new FileWriter(new File(directory, "StringsForUI.strings"));
 
-            fw.write("/*\n" +
-                    " StringsForUI.strings\n" +
-                    " FlirFX\n" +
-                    " \n" +
-                    " Created by Maor Atlas on 6/17/14.\n" +
-                    " Copyright (c) 2014 Zemingo. All rights reserved.\n" +
-                    " */" + "\n");
-            for (String key : map.keySet()) {
-                fw.write("\"" + key + "\"" + " = " + "\"" + map.get(key) + "\"" + ";" + "\n");
-            }
-            fw.close();
+        fw.write("/*\n" +
+                " StringsForUI.strings\n" +
+                " FlirFX\n" +
+                " \n" +
+                " Created by Maor Atlas on 6/17/14.\n" +
+                " Copyright (c) 2014 Zemingo. All rights reserved.\n" +
+                " */" + "\n");
+        for (String key : map.keySet()) {
+            fw.write("\"" + key + "\"" + " = " + "\"" + map.get(key) + "\"" + ";" + "\n");
+        }
+        fw.close();
 
     }
 
-    public static boolean androidTranslation(String file, LinkedHashMap<String,String> translatedStringsMap,String output) throws IOException, SAXException, ParserConfigurationException, TransformerException {
-        File outputFile = new File (output);
+    public static boolean androidTranslation(String file, LinkedHashMap<String, String> translatedStringsMap, String output) throws IOException, SAXException, ParserConfigurationException, TransformerException {
+        File outputFile = new File(output);
         outputFile.mkdir();
-        LinkedHashMap<String,String> englishStringsMap = new LinkedHashMap<>();
+        LinkedHashMap<String, String> englishStringsMap = new LinkedHashMap<>();
 
 
         File xmlToParse = new File(file);
@@ -204,46 +209,46 @@ public class Manager {
         doc.getDocumentElement().normalize();
 
         NodeList stringNode = doc.getElementsByTagName("string");
-        for (int i = 0; i<stringNode.getLength(); i++) {
+        for (int i = 0; i < stringNode.getLength(); i++) {
             String key = stringNode.item(i).getAttributes().getNamedItem("name").getNodeValue();
             String newValue = translatedStringsMap.get(key);
-            if (newValue != null) {
+            if (newValue != null && !newValue.equals("")) {
                 stringNode.item(i).setTextContent(newValue);
             }
-            englishStringsMap.put(key,stringNode.item(i).getTextContent());
+            englishStringsMap.put(key, stringNode.item(i).getTextContent());
         }
 
         stringNode = doc.getElementsByTagName("item");
-        for (int i = 0; i<stringNode.getLength(); i++) {
+        for (int i = 0; i < stringNode.getLength(); i++) {
             if (stringNode.item(i).getParentNode().getNodeName().equals("plurals")) {
                 String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue() + "-" + stringNode.item(i).getAttributes().getNamedItem("quantity").getNodeValue();
                 String newValue = translatedStringsMap.get(key);
                 if (newValue != null) {
                     stringNode.item(i).setTextContent(newValue);
                 }
-                englishStringsMap.put(key,stringNode.item(i).getTextContent());
+                englishStringsMap.put(key, stringNode.item(i).getTextContent());
             }
 
             if (stringNode.item(i).getParentNode().getNodeName().equals("string-array")) {
-                String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue()+ "-" +stringNode.item(i).getTextContent();
+                String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue() + "-" + stringNode.item(i).getTextContent();
                 String newValue = translatedStringsMap.get(key);
                 if (newValue != null) {
                     stringNode.item(i).setTextContent(newValue);
                 }
-                englishStringsMap.put(key,stringNode.item(i).getTextContent());
+                englishStringsMap.put(key, stringNode.item(i).getTextContent());
             }
 
         }
 
         boolean isAdditional = false;
 
-        LinkedHashMap<String,String> untranslatedStringsMap = untranslatedCheck (translatedStringsMap,englishStringsMap);
-        if (untranslatedStringsMap.size()>0) {
+        LinkedHashMap<String, String> untranslatedStringsMap = untranslatedCheck(translatedStringsMap, englishStringsMap);
+        if (untranslatedStringsMap.size() > 0) {
             isAdditional = true;
             writeToExcelFile(untranslatedStringsMap, output + "_UNTRANSLATED_STRINGS");
         }
-        LinkedHashMap<String,String> additionalStringsMap = additionalCheck (translatedStringsMap,englishStringsMap);
-        if (additionalStringsMap.size()>0) {
+        LinkedHashMap<String, String> additionalStringsMap = additionalCheck(translatedStringsMap, englishStringsMap);
+        if (additionalStringsMap.size() > 0) {
             isAdditional = true;
             writeToExcelFile(additionalStringsMap, output + "_ADDITIONAL_STRINGS");
         }
@@ -252,19 +257,19 @@ public class Manager {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File(outputFile,"strings.xml"));
+        StreamResult result = new StreamResult(new File(outputFile, "strings.xml"));
         transformer.transform(source, result);
 
         return isAdditional;
 
 
-}
+    }
 
     private static LinkedHashMap<String, String> additionalCheck(LinkedHashMap<String, String> translatedStringsMap, Map<String, String> sourceMap) {
-        LinkedHashMap<String,String> additionalMap = new LinkedHashMap<>();
-        for (String translatedKey:translatedStringsMap.keySet()) {
-            if (sourceMap.get(translatedKey)==null) {
-                additionalMap.put(translatedKey,translatedStringsMap.get(translatedKey));
+        LinkedHashMap<String, String> additionalMap = new LinkedHashMap<>();
+        for (String translatedKey : translatedStringsMap.keySet()) {
+            if (sourceMap.get(translatedKey) == null) {
+                additionalMap.put(translatedKey, translatedStringsMap.get(translatedKey));
             }
         }
         return additionalMap;
@@ -272,10 +277,10 @@ public class Manager {
     }
 
     private static LinkedHashMap<String, String> untranslatedCheck(LinkedHashMap<String, String> translatedStringsMap, Map<String, String> sourceMap) {
-        LinkedHashMap<String,String> untranslatedMap = new LinkedHashMap<>();
-        for (String engKey:sourceMap.keySet()) {
+        LinkedHashMap<String, String> untranslatedMap = new LinkedHashMap<>();
+        for (String engKey : sourceMap.keySet()) {
             if ((translatedStringsMap.get(engKey) == null) || (translatedStringsMap.get(engKey).equals("") && !sourceMap.get(engKey).equals(""))) {
-                untranslatedMap.put(engKey,sourceMap.get(engKey));
+                untranslatedMap.put(engKey, sourceMap.get(engKey));
             }
         }
         return untranslatedMap;
@@ -285,24 +290,24 @@ public class Manager {
     public static void writeToExcelFile(Map<String, String> map, String directory) throws IOException {
 
 
-            File file = new File (directory);
-            file.mkdir();
-            FileWriter fw = new FileWriter(new File(directory,"Strings table.txt"));
+        File file = new File(directory);
+        file.mkdir();
+        FileWriter fw = new FileWriter(new File(directory, "Strings table.txt"));
 
 
-            for (String key : map.keySet()) {
-                fw.write(key + "\t" + map.get(key) + "\n");
-            }
-            fw.close();
+        for (String key : map.keySet()) {
+            fw.write(key + "\t" + map.get(key) + "\n");
+        }
+        fw.close();
 
     }
 
     public static LinkedHashMap translate(Map<String, String> translatedStringsMap, Map<String, String> englishStringsMap) {
-        LinkedHashMap<String,String> result = new LinkedHashMap<>(englishStringsMap);
+        LinkedHashMap<String, String> result = new LinkedHashMap<>(englishStringsMap);
         for (String key : translatedStringsMap.keySet()) {
             if (result.containsKey(key)) {
                 if (translatedStringsMap.get(key).equals("")) {
-                    result.put(key,englishStringsMap.get(key));
+                    result.put(key, englishStringsMap.get(key));
                 } else {
                     result.put(key, translatedStringsMap.get(key));
                 }
@@ -333,22 +338,22 @@ public class Manager {
             String value = map.get(key);
             String[] valueArr = value.split("\"");
             String newValue = "";
-            if (valueArr.length>1) {
-                for (int j = 0; j < valueArr.length-1; j++){
+            if (valueArr.length > 1) {
+                for (int j = 0; j < valueArr.length - 1; j++) {
                     newValue = newValue + valueArr[j];
                     if (!valueArr[j].endsWith("\\")) {
-                        newValue = newValue+"\\"+"\"";
+                        newValue = newValue + "\\" + "\"";
                         result = true;
                     } else {
-                        newValue = newValue +"\"";
+                        newValue = newValue + "\"";
                     }
                 }
-                if (valueArr[valueArr.length-1].endsWith("\\")) {
-                    newValue = newValue + valueArr[valueArr.length - 1]+"\"";
+                if (valueArr[valueArr.length - 1].endsWith("\\")) {
+                    newValue = newValue + valueArr[valueArr.length - 1] + "\"";
                 } else {
                     newValue = newValue + valueArr[valueArr.length - 1];
                 }
-                map.put(key,newValue);
+                map.put(key, newValue);
             }
         }
         return result;
@@ -360,22 +365,22 @@ public class Manager {
             String value = map.get(key);
             String[] valueArr = value.split("\'");
             String newValue = "";
-            if (valueArr.length>1) {
-                for (int j = 0; j < valueArr.length-1; j++){
+            if (valueArr.length > 1) {
+                for (int j = 0; j < valueArr.length - 1; j++) {
                     newValue = newValue + valueArr[j];
                     if (!valueArr[j].endsWith("\\")) {
-                        newValue = newValue+"\\"+"\'";
+                        newValue = newValue + "\\" + "\'";
                         result = true;
                     } else {
-                        newValue = newValue +"\'";
+                        newValue = newValue + "\'";
                     }
                 }
-                if (valueArr[valueArr.length-1].endsWith("\\")) {
-                    newValue = newValue + valueArr[valueArr.length - 1]+"\'";
+                if (valueArr[valueArr.length - 1].endsWith("\\")) {
+                    newValue = newValue + valueArr[valueArr.length - 1] + "\'";
                 } else {
                     newValue = newValue + valueArr[valueArr.length - 1];
                 }
-                map.put(key,newValue);
+                map.put(key, newValue);
             }
 
         }
@@ -418,22 +423,22 @@ public class Manager {
             doc.getDocumentElement().normalize();
 
             NodeList stringNode = doc.getElementsByTagName("string");
-            for (int i = 0; i<stringNode.getLength(); i++) {
+            for (int i = 0; i < stringNode.getLength(); i++) {
                 String key = stringNode.item(i).getAttributes().getNamedItem("name").getNodeValue();
                 String value = stringNode.item(i).getTextContent();
-                fw.write(key+"\t"+value+"\n");
+                fw.write(key + "\t" + value + "\n");
             }
 
 
             stringNode = doc.getElementsByTagName("item");
-            for (int i = 0; i<stringNode.getLength(); i++) {
+            for (int i = 0; i < stringNode.getLength(); i++) {
                 if (stringNode.item(i).getParentNode().getNodeName().equals("plurals")) {
                     String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue() + "-" + stringNode.item(i).getAttributes().getNamedItem("quantity").getNodeValue();
                     String value = stringNode.item(i).getTextContent();
                     fw.write(key + "\t" + value + "\n");
                 }
-                if (stringNode.item(i).getParentNode().getNodeName().equals("string-array")){
-                    String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue()+ "-" +stringNode.item(i).getTextContent();
+                if (stringNode.item(i).getParentNode().getNodeName().equals("string-array")) {
+                    String key = stringNode.item(i).getParentNode().getAttributes().getNamedItem("name").getNodeValue() + "-" + stringNode.item(i).getTextContent();
                     String value = stringNode.item(i).getTextContent();
                     fw.write(key + "\t" + value + "\n");
                 }
@@ -445,4 +450,46 @@ public class Manager {
         return null;
 
     }
+/**
+    public static void excelTest() throws IOException {
+
+        FileInputStream file = new FileInputStream(new File("test2.xlsx"));
+
+        //Create Workbook instance holding reference to .xlsx file
+        XSSFWorkbook workbook = new XSSFWorkbook(file);
+
+        //Get first/desired sheet from the workbook
+        XSSFSheet sheet = workbook.getSheet("Android Phone 1.4");
+        LinkedHashMap<int,String> languagesIndex = new LinkedHashMap<>();
+        //ArrayList<Pair> languagesIndex = new ArrayList<Pair>();
+
+        Iterator<Row> rowIterator = sheet.iterator();
+        sheet.getRow(0).cellIterator()
+        while (rowIterator.hasNext()) {
+            Row row = rowIterator.next();
+            //For each row, iterate through all the columns
+            Iterator<Cell> cellIterator = row.cellIterator();
+            if (row.getRowNum() == 0) {
+                while (cellIterator.hasNext()) {
+                    Cell cell = cellIterator.next();
+                    if (cell.getStringCellValue().contains("@") || cell.getStringCellValue().contains("key")) {
+                        java.lang.String language = cell.getStringCellValue().replaceAll("@", "");
+                        languagesIndex.put(cell.getColumnIndex(),language);
+                    }
+                }
+
+            }
+            else {
+                while (cellIterator.hasNext()) {
+                    row.get
+                    Cell cell = cellIterator.next();
+
+
+
+
+                }
+
+            }
+        }
+    }  */
 }

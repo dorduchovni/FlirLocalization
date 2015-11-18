@@ -3,8 +3,26 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/swt-4.5-cocoa-macosx-x86_64/swt.jar!/" />
       <root url="jar://$PROJECT_DIR$/xstream-1.4.8/lib/xstream-1.4.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-3.13-20150929.jar!/" />
+      <root url="file://$PROJECT_DIR$/gdata-java-client-master/java/lib" />
+      <root url="file://$PROJECT_DIR$/gdata-java-client-master/java/deps" />
+      <root url="jar://$PROJECT_DIR$/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jaf-1.1.1/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-excelant-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-examples-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-ooxml-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-ooxml-schemas-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/poi-scratchpad-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.13/ooxml-lib/xmlbeans-2.6.0.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/poi-3.13/docs/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/gdata-java-client-master/java/deps" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/gdata-java-client-master/java/deps" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gdata-java-client-master/java/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gdata-java-client-master/java/deps" recursive="false" type="SOURCES" />
   </library>
 </component>

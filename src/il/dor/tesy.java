@@ -7,4 +7,12 @@ import javax.swing.*;
  */
 public class tesy {
     private JPanel panel1;
+    private JRadioButton radioButton1;
+    public JRadioButton radioButton3;
+    private JFormattedTextField formattedTextField1;
+
+    public static void test () {
+
+    }
+
 }
