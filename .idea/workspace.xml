@@ -572,7 +572,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447865139197</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="working version.&#10;started import from excel methods">
+      <created>1447865182235</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1447865182235</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
