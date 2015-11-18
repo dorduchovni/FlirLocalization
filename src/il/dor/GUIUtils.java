@@ -51,6 +51,7 @@ public class GUIUtils {
 		messageBox.setText(title);
 		messageBox.setMessage(message);
 		messageBox.open();
+
 	}
 	
 	/**

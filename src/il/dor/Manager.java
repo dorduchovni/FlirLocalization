@@ -1,6 +1,7 @@
 package il.dor;
 
 
+import com.sun.tools.javac.util.Log;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -20,10 +21,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 import static java.nio.file.Paths.get;
 
@@ -42,7 +40,7 @@ public class Manager {
          **/
         LinkedHashMap<String, String> translatedStringsMap;
         LinkedHashMap<String, String> englishStringsMap;
-        //excelTest();
+        //sheetToMaps();
         String cleanStrings = null;
         try {
             cleanStrings = cleanStrings(strings, platform);
@@ -450,46 +448,72 @@ public class Manager {
         return null;
 
     }
-/**
-    public static void excelTest() throws IOException {
 
-        FileInputStream file = new FileInputStream(new File("test2.xlsx"));
+    public static LinkedHashMap <String, List<String>> getSheetsAndLanguages (String filename) throws IOException {
+        LinkedHashMap<String,List<String>> sheetsAndLanguagesMap = new LinkedHashMap<>();
+        FileInputStream file = new FileInputStream(new File(filename));
+        XSSFWorkbook workbook = new XSSFWorkbook(file);
+        for (int i = 0; i<workbook.getNumberOfSheets(); i++) {
+            XSSFSheet sheet = workbook.getSheetAt(i);
+            List<String> languagesList = new ArrayList<>();
+            Iterator<Cell> firstRowIterator = sheet.getRow(0).cellIterator();
+            while (firstRowIterator.hasNext()) {
+                Cell cell = firstRowIterator.next();
+                if (!cell.isPartOfArrayFormulaGroup()&& (cell.getStringCellValue().contains("@") || cell.getStringCellValue().contains("key"))) {
+                    String language = cell.getStringCellValue().replaceAll("@", "");
+                    languagesList.add(language);
+                }
+            }
+            sheetsAndLanguagesMap.put(sheet.getSheetName(),languagesList);
+        }
+        return sheetsAndLanguagesMap;
+    }
+
+    public static LinkedHashMap<String ,LinkedHashMap<String,String >> sheetToMaps(String filename, String sheetName) throws IOException {
+
+        FileInputStream file = new FileInputStream(new File("test2.xlsx")); //TODO: change to filenmae
 
         //Create Workbook instance holding reference to .xlsx file
         XSSFWorkbook workbook = new XSSFWorkbook(file);
 
         //Get first/desired sheet from the workbook
-        XSSFSheet sheet = workbook.getSheet("Android Phone 1.4");
-        LinkedHashMap<int,String> languagesIndex = new LinkedHashMap<>();
-        //ArrayList<Pair> languagesIndex = new ArrayList<Pair>();
+        XSSFSheet sheet = workbook.getSheet("Android Phone 1.4"); // // TODO: change to sheetNAme
+        LinkedHashMap<String,Integer> languagesIndex = new LinkedHashMap<>();
+        Iterator<Row> rowIterator = sheet.rowIterator();
+        Row row = rowIterator.next();
+        Iterator<Cell> firstRowIterator = sheet.getRow(0).cellIterator(); // TODO: Change to row.cellIterator()
+        while (firstRowIterator.hasNext()) {
+            Cell cell = firstRowIterator.next();
+            if (cell.getStringCellValue().contains("@") || cell.getStringCellValue().contains("key")) {
+                String language = cell.getStringCellValue().replaceAll("@", "");
+                languagesIndex.put(language,cell.getColumnIndex());
+            }
+        }
 
-        Iterator<Row> rowIterator = sheet.iterator();
-        sheet.getRow(0).cellIterator()
+        LinkedHashMap<String ,LinkedHashMap<String,String >> translationsMap = new LinkedHashMap<>();
+        for (String key:languagesIndex.keySet()) {
+            if (!key.equals("key")) {
+                translationsMap.put(key,new LinkedHashMap<String, String>());
+            }
+        }
+        int rownum = 0;
         while (rowIterator.hasNext()) {
-            Row row = rowIterator.next();
+            rownum++;
+            row = rowIterator.next();
             //For each row, iterate through all the columns
             Iterator<Cell> cellIterator = row.cellIterator();
-            if (row.getRowNum() == 0) {
-                while (cellIterator.hasNext()) {
-                    Cell cell = cellIterator.next();
-                    if (cell.getStringCellValue().contains("@") || cell.getStringCellValue().contains("key")) {
-                        java.lang.String language = cell.getStringCellValue().replaceAll("@", "");
-                        languagesIndex.put(cell.getColumnIndex(),language);
-                    }
-                }
-
-            }
-            else {
-                while (cellIterator.hasNext()) {
-                    row.get
-                    Cell cell = cellIterator.next();
-
-
-
-
+            System.out.println(rownum);
+            String key = row.getCell(languagesIndex.get("key")).getStringCellValue();
+            while (cellIterator.hasNext()) {
+                Cell cell = cellIterator.next();
+                String language = sheet.getRow(0).getCell(cell.getColumnIndex()).getStringCellValue().replaceAll("@","");
+                if (languagesIndex.containsKey(language) && !language.equals("key")) {
+                    String value = row.getCell(languagesIndex.get(language)).getStringCellValue();
+                    translationsMap.get(language).put(key,value);
                 }
 
             }
         }
-    }  */
+        return translationsMap;
+    }
 }
