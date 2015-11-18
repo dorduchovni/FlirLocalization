@@ -15,12 +15,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" afterPath="$PROJECT_DIR$/out/production/LocalizationScript/il/dor/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/swt.xml" afterPath="$PROJECT_DIR$/.idea/libraries/swt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/GUI.java" afterPath="$PROJECT_DIR$/src/il/dor/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/Manager.java" afterPath="$PROJECT_DIR$/src/il/dor/Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/tesy.form" afterPath="$PROJECT_DIR$/src/il/dor/tesy.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/il/dor/tesy.java" afterPath="$PROJECT_DIR$/src/il/dor/tesy.java" />
     </list>
     <ignored path="HW10_GUI_IJ.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,6 +75,11 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -566,7 +566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447662994327</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="working version.&#10;started import from excel methods">
+      <created>1447865139197</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1447865139197</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -621,7 +627,8 @@
     <MESSAGE value="working on the new android translation methods" />
     <MESSAGE value="new android translation method&#10;new additional strings method &#10;" />
     <MESSAGE value="fixed additional strings on ios" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed additional strings on ios" />
+    <MESSAGE value="working version.&#10;started import from excel methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="working version.&#10;started import from excel methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
